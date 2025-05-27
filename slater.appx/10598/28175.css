@@ -1,0 +1,36 @@
+html, body {
+  width: 100%;
+  height: auto !important;
+  min-height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+} 
+
+.mask p,
+.single-line{
+	transform:translate3d(0px, 120%, 0px);
+}
+
+[data-hero-section]{opacity:0;}
+
+.nav-row{transform:translate3d(0px, -300%, 0px);}

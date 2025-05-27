@@ -1,0 +1,237 @@
+/* CSS for Flows [Sign up & Login] */
+
+/* Desktop */
+:root {
+  --size-container-max: 1920px;
+}
+
+/* ------------------------- Hide Scrollbar -------------------------------------------------- */
+
+body ::-webkit-scrollbar,
+body::-webkit-scrollbar {display: none;} /* Chrome, Safari, Opera */
+body {-ms-overflow-style: none;} /* IE & Edge */
+html {scrollbar-width: none;} /* Firefox */
+
+/* ------------------------- Reset -------------------------------------------------- */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body.flow {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overscroll-behavior-y: none;
+}
+
+.flow svg {
+  max-width: none;
+  height: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(var(--color-rgb-gray), 0.2);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: rgba(var(--color-rgb-gray), 0.2);
+  text-shadow: none;
+}
+
+/* ------------------------- Lenis -------------------------------------------------- */
+
+html.lenis {height: auto;}
+.lenis.lenis-smooth {scroll-behavior: auto; height: 100vh;}
+.lenis.lenis-smooth [data-lenis-prevent] {overscroll-behavior: contain;}
+.lenis.lenis-stopped {overflow: hidden;}
+.lenis.lenis-scrolling iframe {pointer-events: none;}
+
+/* ------------------------- Flow -------------------------------------------------- */
+
+/* Logo */
+
+.flow-side-logo .flow-side__logo-icon-wrap {
+  transition: transform var(--animation-default); 
+  transform: rotate(0.001deg);  
+}
+
+.flow-side-logo:hover .flow-side__logo-icon-wrap {
+  transform: rotate(-180deg);
+}
+
+
+/* ------------------------- Flow Visual -------------------------------------------------- */
+
+.flow .flow-unicorn-bg canvas { 
+  position:absolute; 
+}
+
+/* ------------------------- Flow Outseta Widget -------------------------------------------------- */
+
+.flow .o--Reset--scope {
+  --font-size: 1em;
+  --font-size-sm: 0.875em;
+  --font-size-xs: 0.75em;
+}
+
+.flow .o--Widget--widgetBody {
+  padding: 0 !important;
+}
+
+.flow .o--Widget--displayMode-light, 
+.flow .o--Widget--widget.o--Widget--displayMode-auto {
+  background: transparent !important;
+}
+
+.flow .o--SectionGroup--sectionGroup {
+  text-align: left !important;
+}
+
+.flow .o--Widget--widget h1 {
+  text-align: left;
+  font-size: 2.25em;
+}
+
+.flow .o--Button--btn {
+  transition: all var(--animation-ease);
+  background-color: var(--color-ignore-neutral-800);
+  font-size: 1em;
+}
+
+.flow .o--Button--btn:hover {
+  background-color: var(--color-ignore-neutral-700);
+}
+
+.flow .o--Widget--widget .o--Button--btn.o--Button--cornerShape-rounded {
+  width: 100%;
+  border-radius: 0.25em;
+  padding: 0.75em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow .o--Widget--widget .o--Button--btn .o--Button--children {
+  font-size: 1em;
+}
+
+.flow .o--Widget--widget .o--FormGroup--formGroup {
+  margin-bottom: 1em;
+}
+
+.flow .o--Widget--widget label.o--Label--label {
+  margin-bottom: 0.5em;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.flow .o--Widget--widget .o--SectionGroup--sectionGroup {
+  margin-bottom: 1.75em;
+}
+
+.flow .o--Widget--widget .state-login [style="margin-top: 24px; text-align: center;"] {
+  margin-top: 1em !important;
+  opacity: 0.5;
+}
+
+.flow .o--Widget--widget .o--Input--input {
+  padding: 0.75em 1em;
+}
+
+.flow .o--Spinner--spinner {
+  left: unset !important;
+  top: unset !important;
+}
+
+.flow .o--Widget--widget .o--Button--btn[disabled] {
+  opacity: 1;
+}
+
+.flow .o--Reset--reset p {
+  margin: 1em 0;
+  color: var(--color-ignore-neutral-700);
+}
+
+.flow .state-forgotPasswordConfirmation .material-icons {
+  color: var(--color-neutral-600) !important;
+  font-size: 3em !important;
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.flow .o--Widget--widgetBody {
+  padding: 0 !important;
+}
+
+.flow .o--Widget--displayMode-light, 
+.flow .o--Widget--widget.o--Widget--displayMode-auto {
+  background: transparent !important;
+}
+
+.flow .o--SectionGroup--sectionGroup {
+  text-align: left !important;
+}
+
+.flow .o--Widget--widget h1 {
+  text-align: left;
+}
+
+.flow .o--PlanDetails--planName .o--text-xs {
+  color: var(--color-ignore-neutral-500);
+}
+
+.flow .o--Widget--widget .o--Input--cornerShape-rounded {
+  border-radius: 0.25em;
+}
+
+.flow .o--Select--selectWrapper.o--Select--cornerShape-rounded select {
+  border-radius: 0.25em;
+  font-size: 1em;
+}
+
+.flow .o--Widget--widget .o--HorizontalToggle--horizontalToggle ul li a {
+  padding: 0.75em 1em;
+  font-size: 1em;
+  color: var(--color-ignore-neutral-800);
+}
+
+.flow .state-registerConfirmation h1 {
+  text-align: center;
+  margin-bottom: 0.15em;
+}
+
+.flow .state-registerConfirmation .material-icons {
+  color: var(--color-success) !important;
+  font-size: 2.5em !important;
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.flow .o--Widget--widget {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.flow .o--termsAndConditions label > span {
+  padding-left: 32px !important;
+  font-size: 0.75em;
+  color: var(--color-neutral-500);
+}
