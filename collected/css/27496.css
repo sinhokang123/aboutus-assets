@@ -1,0 +1,194 @@
+/* CSS Variables [All pages] */
+
+
+/* ------------------------- Variables - Sizes, Animations Etc. ------------------------------------------- */
+
+:root {
+  
+  /* Animations */
+  --cubic-default: cubic-bezier(0.625, 0.05, 0, 1);
+  --duration-default-double: 1.6s; /* Double of default */
+  --duration-default-onehalf: 1.2s; /* One & Half of default */
+  --duration-default: 0.8s;
+  --duration-default-half: 0.4s; /* Half of default */
+  --animation-default-double: var(--duration-default-double) var(--cubic-default);
+  --animation-default-onehalf: var(--duration-default-onehalf) var(--cubic-default);
+  --duration-default-quarter: 0.2s; /* Quarter of default */
+  --animation-default: var(--duration-default) var(--cubic-default);
+  --animation-default-half: var(--duration-default-half) var(--cubic-default);
+  --animation-default-quarter: var(--duration-default-quarter) var(--cubic-default);
+  --animation-ease: 0.2s ease;
+  --animation-ease-double: 0.4s ease;
+  --cubic-bounce: linear(0,0.5737 7.6%,0.8382 11.87%,0.9463 14.19%,1.0292 16.54%,1.0886 18.97%,1.1258 21.53%,1.137 22.97%,1.1424 24.48%,1.1423 26.1%,1.1366 27.86%,1.1165 31.01%,1.0507 38.62%,1.0219 42.57%,0.9995 46.99%,0.9872 51.63%,0.9842 58.77%,1.0011 81.26%,1)
+}
+
+main {
+    /* Sizes */
+  --dash-side-width: 18.5em;
+  --dash-col-width: calc(((99.99vw - (var(--dash-side-width) + 4em)) / var(--dash-columns)) - (var(--dash-col-gap) * ((var(--dash-columns) - 1) / var(--dash-columns))));
+  --dash-col-width-half: calc(((99.99vw - (var(--dash-side-width) + 4em)) / (var(--dash-columns) * 2)) - (var(--dash-col-gap) * (((var(--dash-columns) * 2) - 1) / (var(--dash-columns) * 2))));
+  --dash-columns: 3;
+  --dash-col-gap: 1.5em;
+  --dash-content-width: calc(100vw - (var(--dash-side-width) + var(--dash-col-width) + 5.5em)); /* 3 columns */
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1908px) {main {--dash-columns: 4;} main[data-barba-namespace="resource"] {--dash-columns: 3;}}
+@media screen and (min-width: 2276px) {main {--dash-columns: 5;} main[data-barba-namespace="resource"] {--dash-columns: 3;}}
+@media screen and (max-width: 1091px) {main {--dash-columns: 2;}}
+
+/* Dashboard collapsed */
+body[data-dash-collapsed="true"],
+body[data-dash-collapsed="true"] main {
+  --dash-side-width: var(--dash-side-width-collapsed);
+}
+@media screen and (min-width: 1700px) {[data-dash-collapsed="true"] main {--dash-columns: 4;} [data-dash-collapsed="true"] main[data-barba-namespace="resource"] {--dash-columns: 3;}}
+@media screen and (min-width: 2068px) {[data-dash-collapsed="true"] main {--dash-columns: 5;} [data-dash-collapsed="true"] main[data-barba-namespace="resource"] {--dash-columns: 3;}}
+@media screen and (max-width: 883px) {[data-dash-collapsed="true"] main {--dash-columns: 2;}}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  :root {}
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 767px) {
+  main {
+    /* Sizes */
+    --dash-col-width: calc(((99.99vw - 2em) / var(--dash-columns)) - (var(--dash-col-gap) * ((var(--dash-columns) - 1) / var(--dash-columns))));
+    --dash-col-width-half: calc(((99.99vw - 2em) / (var(--dash-columns) * 2)) - (var(--dash-col-gap) * (((var(--dash-columns) * 2) - 1) / (var(--dash-columns) * 2))));
+    --dash-columns: 1;
+    --dash-col-gap: 1em;
+    --dash-top-height: 5.5em;
+  }
+  
+  [data-dash-collapsed="true"] main {--dash-columns: 1;}
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 479px) {
+  :root {}
+}
+
+/* ------------------------- Variables - Colors ------------------------------------------- */
+
+:root {
+  /* Colors (not changing with Dark/Light Theme) */
+  --color-ignore-neutral-100: #ffffff;
+  --color-ignore-neutral-200: #efeeec;
+  --color-ignore-neutral-300: #e3e1de;
+  --color-ignore-neutral-400: #d0cfcd;
+  --color-ignore-neutral-500: #818180;
+  --color-ignore-neutral-600: #2c2c2c;
+  --color-ignore-neutral-700: #1f1f1f;
+  --color-ignore-neutral-800: #131313;
+  --color-ignore-neutral-900: #000000;
+  --color-ignore-white: var(--color-ignore-neutral-100);
+  --color-ignore-light: var(--color-ignore-neutral-200);
+  --color-ignore-dark: var(--color-ignore-neutral-800);
+  --color-ignore-black: var(--color-ignore-neutral-900);
+  --color-ignore-saved-light: #5447A7;
+  --color-ignore-saved-dark: #6655DD;
+  
+  --color-primary: #ff4c24;
+  --color-success: #0ba954; 
+  --color-error: var(--color-primary);
+  
+  --color-ignore-rgb-dark: 19, 19, 19;
+  --color-ignore-rgb-light: 239, 238, 236;
+  --color-ignore-rgb-black: 0, 0, 0;
+  --color-ignore-rgb-white: 255, 255, 255;
+  
+
+  /* Colors Theme */
+  --color-neutral-100: var(--color-ignore-neutral-100);
+  --color-neutral-200: var(--color-ignore-neutral-200);
+  --color-neutral-300: var(--color-ignore-neutral-300);
+  --color-neutral-400: var(--color-ignore-neutral-400);
+  --color-neutral-500: var(--color-ignore-neutral-500);
+  --color-neutral-600: var(--color-ignore-neutral-600);
+  --color-neutral-700: var(--color-ignore-neutral-700);
+  --color-neutral-800: var(--color-ignore-neutral-800);
+  --color-neutral-900: var(--color-ignore-neutral-900);
+  --color-white: var(--color-ignore-neutral-100);
+  --color-light: var(--color-ignore-neutral-200);
+  --color-dark: var(--color-ignore-neutral-800);
+  --color-black: var(--color-ignore-neutral-900);
+  --color-saved: var(--color-ignore-saved-light);
+  
+  
+  /* RGB Colors, for transparent RGBA */
+  --color-rgb-dark: var(--color-ignore-rgb-dark);
+  --color-rgb-light: var(--color-ignore-rgb-light);
+  --color-rgb-black: var(--color-ignore-rgb-black);
+  --color-rgb-white: var(--color-ignore-rgb-white);
+  --color-rgb-gray: 129, 129, 128;
+}
+
+
+/* Dashboard Theme Dark */
+[data-dash-theme="dark"] {
+  /* Colors */
+  --color-neutral-100: var(--color-ignore-neutral-900);
+  --color-neutral-200: var(--color-ignore-neutral-800);
+  --color-neutral-300: var(--color-ignore-neutral-700);
+  --color-neutral-400: var(--color-ignore-neutral-600);
+  --color-neutral-500: var(--color-ignore-neutral-500);
+  --color-neutral-600: var(--color-ignore-neutral-400);
+  --color-neutral-700: var(--color-ignore-neutral-300);
+  --color-neutral-800: var(--color-ignore-neutral-200);
+  --color-neutral-900: var(--color-ignore-neutral-100);
+  --color-white: var(--color-ignore-neutral-900);
+  --color-light: var(--color-ignore-neutral-800);
+  --color-dark: var(--color-ignore-neutral-200);
+  --color-black: var(--color-ignore-neutral-100);
+  --color-saved: var(--color-ignore-saved-dark);
+  
+  /* RGB Colors, for transparent RGBA */
+  --color-rgb-dark: var(--color-ignore-rgb-light);
+  --color-rgb-light: var(--color-ignore-rgb-dark);
+  --color-rgb-black: var(--color-ignore-rgb-white);
+  --color-rgb-white: var(--color-ignore-rgb-black);
+}
+
+
+/* ------------------------- Scaling System by Osmo [https://osmo.supply/] -------------------------  */
+
+/* Desktop */
+:root {
+  --size-unit: 16; /* body font-size in design - no px */
+  --size-container-ideal: 1440; /* screen-size in design - no px */
+  --size-container-min: 992px;
+  --size-container-max: 1920px;
+  --size-container: clamp(var(--size-container-min), 100vw, var(--size-container-max));
+  --size-font: calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  :root {
+    --size-container-ideal: 1072; /* screen-size in design - no px */
+    /*--size-container-min: 768px;*/
+    --size-container-min: 840px;
+    --size-container-max: 991px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 767px) {
+  :root {
+    --size-container-ideal: 420; /* screen-size in design - no px */
+    --size-container-min: 480px;
+    --size-container-max: 767px;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 479px) {
+  :root {
+    --size-container-ideal: 420; /* screen-size in design - no px */
+    --size-container-min: 320px;
+    --size-container-max: 479px;
+  }
+}

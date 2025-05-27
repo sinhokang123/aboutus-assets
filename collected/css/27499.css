@@ -1,0 +1,586 @@
+/* CSS for Outseta [Dashboard, Sign up & Login] */
+
+/* ------------------------- Outseta Widget Styling -------------------------------------------------- */
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('../../cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/6708f85ff3d3cba6aff43703_PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RM Mono';
+  src: url('../../cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/670aada4409fb3d2ebc1a1cc_RMMono-Regular.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.o--Widget--widget,
+.o--Reset--scope,
+.o--Reset--reset,
+.o--Widget--popupBg {
+  --font-family: PP Neue Montreal, Arial, sans-serif;
+  --accent-color: var(--color-ignore-neutral-800);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.o--Reset--scope {
+  --color: #118bee;
+  --color-bg: #fff;
+  --color-black-15: rgba(0, 0, 0, 0.15);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+  --color-danger: var(--color-primary);
+  --color-granite: rgba(var(--color-ignore-rgb-dark), 0.06);
+  --color-granite-dark: rgba(255, 255, 255, 0.3);
+  --color-text: var(--color-ignore-neutral-700);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --font-size: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --line-height: 150%;
+  --opacity-disabled: 0.55;
+}
+
+.o--Widget--widget, 
+.o--Widget--widget *:not(.material-icons), 
+.o--Widget--widget *:-webkit-autofill::first-line, 
+.o--Widget--widget h1, 
+.o--Widget--widget h2, 
+.o--Widget--widget h3, 
+.o--Widget--widget h4, 
+.o--Widget--widget h5, 
+.o--Widget--widget h6 {
+  font-weight: 500;
+}
+
+.o--NavDesktop--navDesktop ul li.o--NavDesktop--active a {
+  font-weight: 500;
+}
+
+.o--Widget--widget h1 {
+  font-size: 26px;
+}
+
+.o--Widget--popupBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: all var(--animation-ease-double);
+}
+
+.o--Widget--closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.o--Widget--widget label.o--Label--displayMode-light, 
+.o--Widget--widget label.o--Label--displayMode-auto {
+  font-family: RM Mono, sans-serif;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  color: var(--color-ignore-neutral-500);
+  font-weight: 400;
+}
+
+
+.o--Account-BillingAddress {
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+
+.o--Account-BillingAddress fieldset > label.o--Label--label,
+.o--Account-BillingAddress fieldset > label.o--Label--label.o--Label--displayMode-light{
+  font-family: PP Neue Montreal, Arial, sans-serif;
+  text-transform: unset;
+  font-size: 1em;
+  color: var(--color-ignore-neutral-800);
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-bottom: 1em;
+}
+
+.o--NavDesktop--navDesktop ul li a {
+  text-decoration: none;
+}
+
+.o--plan-info.o--SectionGroup--sectionGroup {
+  margin-top: -1em;
+  padding-top: 1em;
+  background-color: var(--color-ignore-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.o--Widget--widget .o--ChargeSummary--invoiceRow.o--ChargeSummary--dueNow {
+  margin-bottom: -0.8em;
+}
+
+.o--Widget--widget .o--ChargeSummary--displayMode-light .o--ChargeSummary--info {
+  color: var(--accent-color);
+  margin-top: 0.1em;
+}
+
+/*.flow .o--Widget--widget .o--SectionGroup--sectionGroup:has(.o--ChargeSummary--info) {*/
+/*  margin-bottom: 0em;*/
+/*}*/
+
+.o--NavDesktop--navDesktop.o--NavDesktop--displayMode-light li.o--NavDesktop--active:before, 
+.o--NavDesktop--navDesktop.o--NavDesktop--displayMode-auto li.o--NavDesktop--active:before {
+  opacity: 0.06;
+}
+
+.Input, 
+.p-FauxInput,
+.o--Select--select{
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.Input:focus, 
+.p-Input--focused,
+.o--Select--select:focus{
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.25);
+}
+
+.o--Select--selectWrapper.o--Select--borderWidth-1px select {
+  border: 1px solid rgba(var(--color-ignore-rgb-dark), 0.1);
+  outline: 0 !important;
+  box-shadow: 0 !important;
+  padding: 0.75em 1em;
+}
+
+.o--Select--selectWrapper > span.material-icons {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 21px;
+  right: 16px;
+}
+
+.o--Select--selectWrapper.o--Select--borderWidth-1px select:focus {
+  border: 1px solid rgba(var(--color-ignore-rgb-dark), 0.25);
+}
+
+.o--App--widgetContent a {
+  text-decoration: underline; 
+  color: var(--color-ignore-neutral-500);
+}
+
+.o--Widget--displayMode-light, 
+.o--Widget--widget.o--Widget--displayMode-auto {
+  background-color: var(--color-ignore-neutral-200);
+}
+
+.o--Widget--widget .o--NavDesktop--navDesktop.o--NavDesktop--displayMode-light, 
+.o--Widget--widget .o--NavDesktop--navDesktop.o--NavDesktop--displayMode-auto {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--Widget--widget .o--StickyActionRow--stickyActionRow.o--StickyActionRow--displayMode-light, 
+.o--Widget--widget .o--StickyActionRow--stickyActionRow.o--StickyActionRow--displayMode-auto {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+  background-color: var(--color-ignore-neutral-200);
+}
+
+.o--Widget--widget .o--Separator--displayMode-light, 
+.o--Widget--widget .o--Separator--displayMode-auto {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--Widget--widget .o--HorizontalToggle--horizontalToggle ul li a {
+  text-decoration: none;
+  line-height: 1.1;
+  padding: 12px 16px;
+}
+
+.o--Widget--widget .o--PlanSelector--displayMode-light .o--PlanSelector--planList li, 
+.o--Widget--widget .o--PlanSelector--displayMode-auto .o--PlanSelector--planList li {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--Widget--widget .o--Input--fieldStyle-light-solid, 
+.o--Widget--widget .o--Input--fieldStyle-auto-solid {
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+  color: var(--color-ignore-neutral-800);
+}
+
+.o--Widget--widget .o--TextArea--fieldStyle-light-solid, 
+.o--Widget--widget .o--TextArea--fieldStyle-auto-solid {
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+  color: var(--color-ignore-neutral-800);
+  resize: vertical;
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--Widget--widget .o--FileUpload--dropzone {
+  border: 1px dashed rgba(var(--color-ignore-rgb-dark), 0.2) !important;
+  border-radius: 4px;
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.02);
+  color: var(--color-ignore-neutral-800);
+  cursor: pointer;
+}
+
+.o--App--supportWidget.o--Widget--widget .o--FileUpload--FileUpload .o--FileUpload--file {
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+  color: var(--color-ignore-neutral-600);
+}
+
+.o--App--supportWidget.o--Widget--widget .o--FileUpload--FileUpload .o--FileUpload--file .material-icons {
+  opacity: 0.5;
+}
+
+.o--Widget--widget .o--FileUpload--dropzone p {
+  opacity: 0.5;
+  font-size: 14px;
+  margin: 18px 0;
+}
+
+.o--Widget--widget .o--FileUpload--dropzone p .material-icons {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.o--Widget--widget .o--FileUpload--dropzone + .o--text-sm {
+  font-size: 12px;
+  text-align: center;
+}
+
+.o--App--supportWidget .o--Button--btn {
+  width: 100%;
+  padding: 13px 16px;
+}
+
+.o--App--supportWidget .o--Button--btn span {
+  font-size: 16px !important;
+}
+
+.o--App--supportWidget .o--Button--btn {
+  position: relative !important;
+}
+
+.o--App--supportWidget .o--Button--btn .o--Spinner--spinner {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.o--App--supportWidget .o--Button--btn[disabled] {
+  opacity: 1;
+}
+
+.o--Badge--badge {
+  background-color: var(--color-ignore-dark) !important;
+  color: var(--color-ignore-light) !important;
+}
+
+.o--Widget--widget .o--TextArea--fieldStyle-light-solid:active, 
+.o--Widget--widget .o--TextArea--fieldStyle-auto-solid:active,
+.o--Widget--widget .o--TextArea--fieldStyle-light-solid:focus, 
+.o--Widget--widget .o--TextArea--fieldStyle-auto-solid:focus {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.25);
+}
+
+.o--Widget--widget .o--Radio--Radio .o--Radio--state label {
+  font-weight: 500;
+}
+
+.o--Widget--widget .o--Radio--Radio.o--Radio--displayMode-light .o--Radio--state label:after, 
+.o--Widget--widget .o--Radio--Radio.o--Radio--displayMode-light .o--Radio--state label:before, 
+.o--Widget--widget .o--Radio--Radio.o--Radio--displayMode-auto .o--Radio--state label:after, 
+.o--Widget--widget .o--Radio--Radio.o--Radio--displayMode-auto .o--Radio--state label:before {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--PlanCancel--planCancel ul {
+  padding-left: 0;
+}
+
+.o--PlanCancel--planCancel ul li {
+  padding: 4px 0;
+}
+
+.o--Widget--widget .o--Input--input:active, 
+.o--Widget--widget .o--Input--input:focus {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.25);
+}
+
+.o--Widget--widget a.cancel-subscription {
+  text-decoration: none;
+}
+
+.o--Widget--widget .o--PlanSelector--planSelector ul.o--PlanSelector--planList li.o--PlanSelector--planListItem .o--PlanSelector--planName {
+  font-weight: 500;
+}
+
+.o--Widget--widget .o--NavDesktop--navDesktop {
+  padding: 16px;
+}
+
+.o--Widget--widget .o--HorizontalToggle--horizontalToggle ul {
+  width: 100%;
+}
+
+.o--Widget--widget .o--HorizontalToggle--horizontalToggle ul li {
+  flex-grow: 1;
+}
+
+.o--Select--selectWrapper.o--Select--fieldStyle-light-solid select, 
+.o--Select--selectWrapper.o--Select--fieldStyle-light-solid select option, 
+.o--Select--selectWrapper.o--Select--fieldStyle-auto-solid select, 
+.o--Select--selectWrapper.o--Select--fieldStyle-auto-solid select option {
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+  color: var(--color-ignore-neutral-800);
+}
+
+.o--Widget--widget .o--BillingInvoiceRecipients--billingInvoiceRecipients.o--BillingInvoiceRecipients--displayMode-light, 
+.o--Widget--widget .o--BillingInvoiceRecipients--billingInvoiceRecipients.o--BillingInvoiceRecipients--displayMode-auto {
+  background-color: var(--color-ignore-neutral-200);
+}
+
+.o--Widget--displayMode-light, .o--Widget--displayMode-light *, 
+.o--Widget--widget.o--Widget--displayMode-auto, .o--Widget--widget.o--Widget--displayMode-auto * {
+  color: var(--color-ignore-dark);
+}
+
+.o--Widget--widget .o--BillingInvoiceRecipients--billingInvoiceRecipients ul li {
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.1);
+}
+
+.o--Select--selectWrapper > span.material-icons {
+  right: 12px;
+  color: var(--color-ignore-neutral-500);
+}
+
+.o--Widget--widget label.o--Label--required:after {
+  color: var(--color-primary);
+}
+
+.o--App--supportWidget  h1 {
+  text-align: left !important;
+}
+
+.o--App--supportWidget h1.o--thank-you {
+  text-align: center !important;
+}
+
+.o--App--supportWidget .o--SupportRequestForm--supportRequestForm:has(h1.o--thank-you) .material-icons {
+  color: var(--color-neutral-500) !important;
+  font-size: 48px !important;
+  height: 48px !important;
+  width: 48xpx !important;
+  line-height: 48px !important;
+}
+
+.o--Widget--widget .o--Account-MailingAddress:has(label + span:empty) {
+  display: none;
+}
+
+.flow .o--Widget--widget .o--NewPasswordInput--newPasswordInput,
+.flow .o--Widget--widget .o--PasswordInput--passwordInput div, 
+.flow .o--Widget--widget .o--PasswordChange--passwordToggle div{
+  font-size: var(--font-size-xs) !important;
+  margin-top: 1em !important;
+}
+
+.flow .o--Widget--widget .o--NewPasswordInput--newPasswordInput span,
+.flow .o--Widget--widget .o--PasswordInput--passwordInput span,
+.flow .o--Widget--widget .o--PasswordChange--passwordToggle span {
+  opacity: 0.5;
+}
+
+.flow .o--Widget--widget .o--NewPasswordInput--newPasswordInput .material-icons,
+.flow .o--Widget--widget .o--PasswordInput--passwordInput .material-icons, 
+.flow .o--Widget--widget .o--PasswordChange--passwordToggle .material-icons{
+  font-size: 1.25em;
+}
+
+.flow [style="margin-top: 12px; padding-left: 12px;"] {
+  padding-left: 0 !important;
+}
+
+.flow [style="margin-top: 12px; padding-left: 12px;"] .material-icons {
+  font-size: 1em !important;
+  margin-bottom: 0.25em;
+}
+
+.flow .o--Widget--widget .o--DiscountSelector--discountEntry input {
+  padding-left: 2.5em;
+}
+
+.flow .o--Widget--widget .o--DiscountSelector--discountEntry .material-icons {
+  left: 1em;
+  font-size: 1em;
+  opacity: 0.66;
+  top: 1.1em;
+}
+
+.flow .state-ResetPassword p {
+  text-align: left !important;
+}
+
+.dash .o--Widget--widget {
+  border-radius: 8px !important;
+}
+
+[data-environment] body {
+  display: flex;
+  align-items: center;
+  color: var(--color-ignore-dark);
+  background-color: var(--color-ignore-neutral-300);
+  font-family: PP Neue Montreal, Arial, sans-serif;
+  font-weight: 500;
+}
+
+[data-environment] body .container {
+  width: 100%;
+}
+
+[data-environment] body .container .body-content {
+  width: 100%;
+  padding: 0;
+}
+
+[data-environment] #auth-embed {
+  width: 100% !important;
+}
+
+[data-environment] img[title="Osmo"] {
+  max-height: 4em !important;
+}
+
+[data-environment] .o--Widget--widget {
+  border-radius: 0.5em;
+  border: 1px solid var(--color-ignore-neutral-400);
+  background-color: var(--color-ignore-neutral-200);
+  max-width: 540px;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-family: PP Neue Montreal, Arial, sans-serif !important;
+}
+
+[data-environment] .o--Widget--widget .o--Unsubscribed--Unsubscribed h1 {
+  text-align: center;
+}
+
+[data-environment] .o--Widget--widget h1 {
+  text-align: left;
+  color: var(--color-dark)
+}
+
+[data-environment] .o--Widget--widget label.o--Label--displayMode-light {
+  color: var(--color-neutral-500);
+}
+
+[data-environment] .o--Widget--widget label.o--Label--label {
+  margin-bottom: 0.5em;
+}
+
+[data-environment] .o--NewPasswordInput--newPasswordInput,
+[data-environment] .o--PasswordInput--passwordInput{
+  font-size: var(--font-size-xs) !important;
+  margin-top: 1em !important;
+}
+
+[data-environment] .o--NewPasswordInput--newPasswordInput span,
+[data-environment] .o--PasswordInput--passwordInput span {
+  opacity: 0.5;
+}
+
+[data-environment] .o--NewPasswordInput--newPasswordInput .material-icons,
+[data-environment] .o--PasswordInput--passwordInput .material-icons{
+  font-size: 1.75em;
+}
+
+[data-environment] .o--Widget--widget .o--Input--fieldStyle-light-solid {
+  padding: 1em 1em;
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+}
+
+[data-environment] .o--Widget--widget .o--Input--fieldStyle-light-solid:focus,
+[data-environment] .o--Widget--widget .o--Input--fieldStyle-light-solid:active{
+  border-color: rgba(var(--color-ignore-rgb-dark), 0.25);
+}
+
+[data-environment] .o--Spinner--spinner {
+  left: unset !important;
+  top: unset !important;
+}
+
+.o--Widget--widget .o--ErrorMessages--errorMessages {
+  background-color: var(--color-primary);
+}
+
+[data-environment] .o--Widget--widget .o--Button--btn {
+  padding: 1em 1em;
+}
+
+[data-environment] .o--Button--btn {
+  width: 100%;
+}
+
+[data-environment] .o--Widget--widget .o--Button--btn[disabled] {
+  opacity: 1;
+}
+
+[data-environment] .o--Widget--widget .o--Button--btn .o--Button--children {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-light);
+}
+
+[data-environment] [style="margin-top: 12px; padding-left: 12px;"] {
+  padding-left: 0 !important;
+}
+
+[data-environment] [style="margin-top: 12px; padding-left: 12px;"] .material-icons {
+  font-size: 16px !important;
+  margin-bottom: 3px;
+}
+
+[data-environment] .state-ResetPassword .o--FormGroup--formGroup {
+  gap: 8px;
+}
+
+[data-environment] .state-ResetPassword .o--FormGroup--formGroup button {
+  width: 100%;
+  margin: 0;
+  padding: 1em 1em;
+}
+
+[data-environment] .state-login .o--text-center {
+  text-align: left !important;
+}
+
+/* Hide the cancel button */
+[data-environment] .state-forgotPassword .o--Button--buttonType-cancel,
+[data-environment] .state-ResetPassword .o--Button--buttonType-cancel {
+  display: none;
+}
+
+[data-environment] .state-forgotPasswordConfirmation .o--Button--btn {
+  display: none;
+}
+
+[data-environment] .state-login h1 + span.o--text-sm:has(a) {
+  display: none !important;
+} 
+
+.o--Widget--widget .o--Checkbox--Checkbox.o--Checkbox--fontSize-sm .o--Checkbox--state label * {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: -2px;
+}
+
+.o--Widget--widget .o--Checkbox--Checkbox.o--Checkbox--fontSize-sm .o--Checkbox--state label:before {
+  border-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(var(--color-ignore-rgb-dark), 0.06);
+}
